@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- bootstrap css components-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+    <style>
+        .tab-content {
+            border:1px solid #DDD;
+            border-top: none;
+            padding: 10px;
+        }
+    </style>
+
+    <title>tabs practice1</title>
+</head>
+<body>
+   
+    
+    <!-- start with a space utility container -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12"><button class="btn btn-info">TABS PRACTICE 1</button></div>
+        <div class="col">
+
+            <!-- nav base class with nav-tabs to format for tabs (not pills) -->
+            <ul class="nav nav-tabs nav-fill">
+                <!-- list elements require the 'nav-item' class, but using only <a> items do not -->
+                <!-- the <a> element takes class nav-link, href to id's of text below, role, data-attrib -->
+                <li class="nav-item"><a class="nav-link active" href="#one" role="tab" data-toggle="tab">one</a></li>
+                <li class="nav-item"><a class="nav-link" href="#two" role="tab" data-toggle="tab">two</a></li>
+                <li class="nav-item"><a class="nav-link" href="#three" role="tab" data-toggle="tab">three</a></li>
+                <li class="nav-item"><a class="nav-link" href="#four" role="tab" data-toggle="tab">four</a></li>
+                <li class="nav-item"><a class="nav-link" href="#five" role="tab" data-toggle="tab">five</a></li>
+                <li class="nav-item"><a class="nav-link" href="#six" role="tab" data-toggle="tab">six</a></li>
+                <li class="nav-item"><a class="nav-link" href="#seven" role="tab" data-toggle="tab">seven</a></li>
+                <li class="nav-item"><a class="nav-link" href="#eight" role="tab" data-toggle="tab">eight</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane show active" id="one" role="tabpanel">
+                    <h3>ONE<small>one</small></h3>
+                    <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non laborum quo, vitae tempore voluptas fuga, autem veritatis modi consectetur ex eius consequatur officiis possimus, saepe impedit incidunt alias. Velit praesentium aliquid quae, fugit expedita pariatur error tempora aut minima accusantium excepturi aspernatur nostrum fugiat! Ratione tempore nam dolore vero voluptate.</p>
+                </div>
+                <div class="tab-pane" id="two" role="tabpanel">
+                    <h3>TWO<small>two</small></h3>
+                    <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolore facilis, minus reiciendis quas mollitia veniam facere fugit laboriosam ratione quasi, animi provident, quis id voluptates pariatur eveniet tempore ullam eligendi quo repellat quae vero quisquam? Quam atque vero, cumque quo commodi possimus nisi pariatur odio mollitia tenetur! Voluptatibus, dicta?.</p>
+                </div>
+                <div class="tab-pane" id="three" role="tabpanel">
+                    <h3>THREE<small>three</small></h3>
+                    <p class="d-none d-sm-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, accusantium delectus ex aliquid voluptatibus quo, modi necessitatibus blanditiis maiores laudantium, harum ipsum debitis totam eius assumenda sed rem non. Eligendi dolorum est ab distinctio quibusdam sequi fuga consequuntur at nobis harum dolorem unde ullam quae iure et odit, blanditiis quisquam..</p>
+                </div>
+                <div class="tab-pane" id="four" role="tabpanel">
+                    <h3>FOUR<small>four</small></h3>
+                    <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ullam id amet natus excepturi rerum error aliquid officia, aperiam corporis totam maxime voluptatem at, dolorem est aliquam quasi et nobis atque. Corrupti, eveniet. In, libero! Doloremque, ipsum? Veritatis vitae, ab neque atque dolore, aliquam id reiciendis doloribus assumenda reprehenderit ducimus..</p>
+                </div>
+                <div class="tab-pane" id="five" role="tabpanel">
+                    <h3>FIVE<small>five</small></h3>
+                    <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam esse accusamus officiis eligendi minima fugiat eos qui vero error fuga commodi nesciunt ullam at autem nam, corporis consequatur voluptatibus obcaecati fugit aliquam harum modi adipisci alias! Commodi minima natus eveniet officiis, tempore iure esse aspernatur, placeat provident aperiam, quaerat error..</p>
+                </div>
+                <div class="tab-pane" id="six" role="tabpanel">
+                    <h3>SIX<small>six</small></h3>
+                    <p class="d-none d-sm-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit magni quo in distinctio id error, ipsum ipsa doloribus vitae voluptas, soluta unde optio, aliquam cum sapiente aperiam repellendus sit voluptatem? Eligendi omnis error dolore alias, corrupti ab voluptate ducimus tempora facilis beatae similique assumenda provident magni voluptates commodi quae quidem.</p>
+                </div>
+                <div class="tab-pane" id="seven" role="tabpanel">
+                    <h3>SEVEN<small>seven</small></h3>
+                    <p class="d-none d-sm-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis rem iste sequi, totam accusamus quia aliquid officiis quos dicta voluptate minima quo quibusdam sint sapiente blanditiis harum aspernatur officia laudantium, consequatur doloribus et corporis. Omnis, quod suscipit! Quasi voluptatum maxime ipsum, ad doloremque, neque nisi soluta dolor suscipit adipisci est!</p>
+                </div>
+                <div class="tab-pane" id="eight" role="tabpanel">
+                    <h3>EIGHT<small>eight</small></h3>
+                    <p class="d-none d-sm-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius doloribus nulla consequatur labore quibusdam, blanditiis ipsa quod dolor veritatis reiciendis quidem impedit rerum itaque, perferendis earum hic asperiores sequi neque assumenda necessitatibus et aliquid, rem sapiente! Facere repellendus ad quasi recusandae cum non eligendi itaque a quo dicta. Suscipit, doloremque?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</nav>
+    
+    <!-- bootstrap JS components -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</body>
+</html>
