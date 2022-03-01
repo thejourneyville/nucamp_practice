@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Buttons 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <style>
+        .answer-styling {
+            font-size: 100px;
+            font-weight: 700px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+    </style>
+
+</head>
+<body id="colors">
+
+    <div class="container">
+        <form>
+            <div class="row">
+                    <div class="col text-center m-5">
+                        <h2><strong>data attributes with buttons</strong></h2>
+                    </div>
+                    <div class="col-12 text-center">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button class="btn btn-outline-dark" type="button" data-color="dark brown">Dark Brown</button>
+                            <button class="btn btn-outline-dark" type="button" data-color="reddish pink">Reddish Pink</button>
+                        </div>
+                    </div>
+
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p class="col text-center mt-5 answer-styling"></p>
+        </div>
+    </div>
+    
+    <script>
+        function runFunc(e) {
+            if (e.target !== e.currentTarget) {
+                let clickedButton = e.target.dataset.color;
+                document.getElementsByTagName("p")[0].textContent = clickedButton;
+                
+                // para.textContent = clickedButton;
+            } else {
+                document.getElementsByTagName("p")[0].textContent ="";
+            }
+            e.stopPropagation();
+        }
+
+        const colors = document.querySelector("#colors");
+        let para = document.querySelector("p");
+        colors.addEventListener("click", runFunc, false);
+
+    </script>
+</body>
+</html>
