@@ -19,18 +19,18 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <button id="one">show1</button>
-                <button id="two">show2</button>
-                <button id="three">show3</button>
+                <button class="buttonOne" id="one">show1</button>
+                <button class="buttonTwo" id="two">show2</button>
+                <button class="buttonThree" id="three">show3</button>
             </div>
         </div>
     </div>
 
     <div class="container">
         <div class="row position-relative top-50 start-50 translate-middle-x" style="padding-top: 10em">
-            <button  type="button" class="btn btn-primary d-none" id="set1">PRIMARY</button>
-            <button  type="button"class="btn btn-success d-none" id="set2">SUCCESS</button>
-            <button type="button" class="btn btn-danger d-none" id="set3">DANGER</button>
+            <button type="button" class="buttonOne btn btn-primary d-none" id="set1">PRIMARY</button>
+            <button type="button"class="buttonTwo btn btn-success d-none" id="set2">SUCCESS</button>
+            <button type="button" class="buttonThree btn btn-danger d-none" id="set3">DANGER</button>
         </div>
     </div>
     
@@ -38,46 +38,62 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
     <script>
-
-        const result1 = document.querySelector("#set1");
-        const result2 = document.querySelector("#set2");
-        const result3 = document.querySelector("#set3");
-
         document.addEventListener('click', function(e) {
             if (e.target !== e.currentTarget) {
-                let selButton = e.target.id
-                if (selButton === "one") {
+                
+                const allButtons = ["buttonOne", "buttonTwo", "buttonThree"];
+                if (allButtons.includes(e.target.className)) {
+                    let selButton = e.target.className;
+                    allButtons.forEach((items) => {document.getElementsByClassName(items)[1].classList.add("d-none")});
 
-                    result1.classList.remove("d-none");
-                    
-                    if (!result2.classList.contains("d-none")) {
-                        result2.classList.add("d-none")
-                    }
-                    if (!result3.classList.contains("d-none")) {
-                        result3.classList.add("d-none")
-                    }
-                } else if (selButton === "two") {
-                    result2.classList.remove("d-none");
-
-                    if (!result1.classList.contains("d-none")) {
-                        result1.classList.add("d-none")
-                    }
-                    if (!result3.classList.contains("d-none")) {
-                        result3.classList.add("d-none")
-                    }
-                } else if (selButton === "three") {
-                    result3.classList.remove("d-none");
-
-                    if (!result1.classList.contains("d-none")) {
-                        result1.classList.add("d-none")
-                    }
-                    if (!result2.classList.contains("d-none")) {
-                        result2.classList.add("d-none")
-                    }
+                    const result = document.getElementsByClassName(selButton)[1];
+                    result.classList.remove("d-none");
                 };
-            }
+            };
         });
     </script>
+
+<!-- <script>
+
+    const result1 = document.querySelector("#set1");
+    const result2 = document.querySelector("#set2");
+    const result3 = document.querySelector("#set3");
+
+    document.addEventListener('click', function(e) {
+        if (e.target !== e.currentTarget) {
+            let selButton = e.target.id
+            if (selButton === "one") {
+
+                result1.classList.remove("d-none");
+                
+                if (!result2.classList.contains("d-none")) {
+                    result2.classList.add("d-none")
+                }
+                if (!result3.classList.contains("d-none")) {
+                    result3.classList.add("d-none")
+                }
+            } else if (selButton === "two") {
+                result2.classList.remove("d-none");
+
+                if (!result1.classList.contains("d-none")) {
+                    result1.classList.add("d-none")
+                }
+                if (!result3.classList.contains("d-none")) {
+                    result3.classList.add("d-none")
+                }
+            } else if (selButton === "three") {
+                result3.classList.remove("d-none");
+
+                if (!result1.classList.contains("d-none")) {
+                    result1.classList.add("d-none")
+                }
+                if (!result2.classList.contains("d-none")) {
+                    result2.classList.add("d-none")
+                }
+            };
+        }
+    });
+</script> -->
 
 </body>
 </html>
